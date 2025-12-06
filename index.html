@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header>
+        <h1>My Dashboard</h1>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <div class="container">
+        
+        <!-- Card 1: Greeting -->
+        <div class="card">
+            <h2>Greeting</h2>
+            <p id="message">Hello! Welcome to the dashboard.</p>
+            <button class="action-btn" onclick="changeText()">Change Message</button>
+        </div>
+
+        <!-- Card 2: Counter -->
+        <div class="card">
+            <h2>Counter</h2>
+            <div class="counter-value" id="count">0</div>
+            <div class="counter-controls">
+                <button class="action-btn" onclick="updateCounter(-1)">-</button>
+                <button class="action-btn" onclick="updateCounter(1)">+</button>
+            </div>
+        </div>
+
+        <!-- Card 3: Character Count -->
+        <div class="card">
+            <h2>Character Count</h2>
+            <textarea id="text-input" placeholder="Type something..." oninput="updateCharCount()"></textarea>
+            <p>Characters: <span id="char-count">0</span></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
